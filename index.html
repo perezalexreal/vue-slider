@@ -12,7 +12,7 @@
 
 
     <div id="app">
-        <h2>Slider di freddure</h2>
+        <h2>Slider di Immagini</h2>
 
         <!--
             esempio v-for con oggetto
@@ -21,9 +21,8 @@
             <p>{{ freddura.frase }}</p>
         </div> -->
 
-        <div class='freddura'>
-            <h3>{{ freddure[currentIndex].titolo }}</h3>
-            <p>{{ freddure[currentIndex].frase }}</p>
+        <div v-model="images" >
+            <img :src="[images[currentIndex].urlImage]" class='containerImage' alt="">
         </div>
 
         <div @click="prevFreddura">prev</div>
@@ -39,9 +38,9 @@
         RICORDATEVI: :class è una lista (array)
         https://vuejs.org/v2/guide/class-and-style.html
         -->
-        <div :class="['card', age >= 18 ? 'active' : 'disable']">Classe automatica</div>
-
-        
+        <div :class="['dots', currentIndex]" v-for="(dots, i ) in images">
+            <div :class="['dot', currentIndex == i ? 'red' : '']">{{ i }}</div>
+        </div>
 
 
 

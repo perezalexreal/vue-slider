@@ -13,32 +13,16 @@ new Vue({
         currentIndex: 0,
         images: [
             {
-                urlImage: 'Elettronica',
-                frase: 'Cosa fa un uccellino di un milligrammo su un ramo? Micro-cip! Micro-cip! Micro-cip!'
+                urlImage: '/Users/alexanderjaviercabelloperez/Desktop/Boolean /vue-slider/img/marc-kleen-eRwmBvhfvG8-unsplash.jpg',
             },
             {
-                urlImage: 'Il mare',
-                frase: 'Cosa fanno due squali in una gara? Vengono squalificati'
+                urlImage: '/Users/alexanderjaviercabelloperez/Desktop/Boolean /vue-slider/img/maria-teneva-HQnYH_zBcOg-unsplash.jpg',
             },
             {
-                urlImage: 'Fai da te!',
-                frase: 'Che vitaccia, ci vorrebbe un cacciavite più grosso.'
+                urlImage: '/Users/alexanderjaviercabelloperez/Desktop/Boolean /vue-slider/img/nils-leonhardt-YeBI31kK2_4-unsplash.jpg',
             },
             {
-                urlImage: 'Colazione',
-                frase: 'Un uomo entra in un caffè...Splash'
-            },
-            {
-                urlImage: 'Dieta',
-                frase: 'Ma perché se io mi nutro e tu ti nutri, Frank Sinatra?'
-            },
-            {
-                urlImage: 'Psicologo',
-                frase: 'Dottore, soffro di personalità multipla… vi prego, aiutateci!'
-            },
-            {
-                urlImage: 'Business',
-                frase: 'Chiude una fabbrica di carta igienica: andava a rotoli.'
+                urlImage: '/Users/alexanderjaviercabelloperez/Desktop/Boolean /vue-slider/img/sebastiaan-stam-RChZT-JlI9g-unsplash.jpg',
             }
         ]
     },
@@ -58,12 +42,12 @@ new Vue({
             // } else {  // qui è true
             //     this.modalShow = false;
             // }
-            
+
             // this.modalShow deve essere il contrario di sé stesso
             this.modalShow = !this.modalShow;
         },
         nextFreddura: function () {
-            if(this.currentIndex === this.images.length - 1){
+            if (this.currentIndex === this.images.length - 1) {
                 this.currentIndex = 0;
             } else {
                 this.currentIndex++;
@@ -71,9 +55,9 @@ new Vue({
             // todo -> e se arrivo alla fine dell'array?
         },
         prevFreddura: function () {
-            if(this.currentIndex === 0 ){
+            if (this.currentIndex === 0) {
                 this.currentIndex = this.images.length - 1;
-            } else { 
+            } else {
                 this.currentIndex--;
             }
             // todo -> e se arrivo a 0?
