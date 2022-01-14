@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+    <div id="app">
+        <h2>Slider di freddure</h2>
+
+        <!--
+            esempio v-for con oggetto
+            <div v-for="freddura in freddure" class='freddura'>
+            <h3>{{ freddura.titolo }}</h3>
+            <p>{{ freddura.frase }}</p>
+        </div> -->
+
+        <div class='freddura'>
+            <h3>{{ freddure[currentIndex].titolo }}</h3>
+            <p>{{ freddure[currentIndex].frase }}</p>
+        </div>
+
+        <div @click="prevFreddura">prev</div>
+        <div @click="nextFreddura">next</div>
+
+        <hr />
+        <!-------- -->
+        <!-- decidere il nome di una classe con una condizione -->
+
+        <!-- al seguente div daremo classe active se la proprietà nel data
+        di nome age è maggiore di 18, altrimenti gli daremo classe disable.
+        Inoltre il div avrà sempre la classe card
+        RICORDATEVI: :class è una lista (array)
+        https://vuejs.org/v2/guide/class-and-style.html
+        -->
+        <div :class="['card', age >= 18 ? 'active' : 'disable']">Classe automatica</div>
+
+        
+
+
+
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
